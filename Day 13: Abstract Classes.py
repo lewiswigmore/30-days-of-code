@@ -11,4 +11,3 @@ class MyBook(Book):
         print(f'Title: {self.title}')
         print(f'Author: {self.author}')
         print(f'Price: {price}')
-
