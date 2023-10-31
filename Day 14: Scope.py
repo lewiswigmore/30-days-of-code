@@ -1,15 +1,15 @@
 class Difference:
     def __init__(self, a):
+        # Initialize the elements with the input list 'a'.
         self.__elements = a
+
     def computeDifference(self):
-        self.a = a
-        self.maximumDifference = max(a) - min(a)
+        # Calculate the maximum difference between elements.
+        self.maximumDifference = max(self.__elements) - min(self.__elements)
         return self.maximumDifference
-# End of Difference class
 
 _ = input()
 a = [int(e) for e in input().split(' ')]
-
 d = Difference(a)
 d.computeDifference()
 
