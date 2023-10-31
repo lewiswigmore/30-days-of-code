@@ -1,25 +1,13 @@
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
-
-    
-
-if __name__ == '__main__':
+if __name__ == '__main':
     n = int(input().strip())
-    # Convert to binary string
-    b = bin(n)[2::]
     
-    # Convert string to list
-    lst = []
-    for i in b:
-        lst.append(i)
+    # Convert the decimal number to a binary string and remove the '0b' prefix
+    b = bin(n)[2:]
     
-    # Iterate through list to find highest count of consecutive 1s
+    # Convert the binary string to a list of characters
+    lst = list(b)
+    
+    # Iterate through the list to find the highest count of consecutive 1s
     max_length = 0
     current_length = 0
     
@@ -29,5 +17,5 @@ if __name__ == '__main__':
             max_length = max(max_length, current_length)
         else:
             current_length = 0
+            
     print(max_length)
-    
